@@ -6,6 +6,8 @@ app.use(express.json())
 
 app.use(routes)
 
-app.listen(5000, () => {
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
     console.log('Servidor ligado 🚀')
 })
