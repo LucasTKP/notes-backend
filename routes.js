@@ -44,7 +44,7 @@ router.post('/api/login', async (req, res) => {
           email: email
         }
     })
-    
+    console.log(senha)
     if (result.length > 0) {
         bcrypt.compare(senha, result[0].senha, function(err, igual) {
             if (err) {
